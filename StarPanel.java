@@ -29,12 +29,12 @@ public class StarPanel extends JPanel {
     private void update(ActionEvent e) {
         for (int i = 0; i < constellation.length; i++) {
             constellation[i].posZ -= 2;
-            constellation[i].displayX = (int) map(Math.ceil(constellation[i].posX - Starfield.WIDTH / 2) / constellation[i].posZ, -1, 1, 0, Starfield.WIDTH);
-            constellation[i].displayY = (int) map(Math.ceil(constellation[i].posY - Starfield.HEIGHT / 2) / constellation[i].posZ, -1, 1, 0, Starfield.HEIGHT);
+            constellation[i].displayX = (int) map(Math.ceil(constellation[i].posX - Starfield.WIDTH / 2.0) / constellation[i].posZ, -1, 1, 0, Starfield.WIDTH);
+            constellation[i].displayY = (int) map(Math.ceil(constellation[i].posY - Starfield.HEIGHT / 2.0) / constellation[i].posZ, -1, 1, 0, Starfield.HEIGHT);
 
             if (constellation[i].displayX > Starfield.WIDTH || constellation[i].displayX < 0 ||
                 constellation[i].displayY > Starfield.HEIGHT || constellation[i].displayY < 0) {
-                    constellation[i] = new Star();
+                    constellation[i] = new Star(false);
                 }
         }
         repaint();
