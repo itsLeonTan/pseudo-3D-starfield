@@ -7,7 +7,7 @@ A Java starfield simulator built using Java Swing (JFrame/JPanel).
 
 ## Inspiration
 
-This is a coding practice project inspired by a Coding Challenge video from Daniel Shiffman on The Coding Train (https://youtu.be/17WoOqgXsRM?si=sfyEwFVVQNk1lntZ). 
+This is a coding practice project inspired by a [Coding Challenge video from Daniel Shiffman on The Coding Train](https://youtu.be/17WoOqgXsRM?si=sfyEwFVVQNk1lntZ). 
 
 While the core concept is similar, the implementation differs and was written independently in Java. 
 
