@@ -15,7 +15,7 @@ The goal remains the same: simulating 3D high-speed space travel in a 2D environ
 
 ## How It Works
 
-Each star holds an x, y, and z value representing its position in 3D space relative to the screen center. 
+Each `Star` object holds an `x`, `y`, and `z` value representing its position in 3D space relative to the screen center. 
 
 Movement is calculated through this formula:
 
@@ -23,15 +23,15 @@ $$x_{proj} = \frac{x - (\frac{WIDTH}{2})}{z}$$
 
 $$y_{proj} = \frac{y - (\frac{HEIGHT}{2})}{z}$$
 
-Dividing by z simulates perspective projection. Stars with smaller z-values appear closer to the viewer and therefore moving faster away from the center of the screen.
+Dividing by `z` simulates perspective projection. Stars with smaller `z`-values appear closer to the viewer and therefore moving faster away from the center of the screen.
 
-In each frame, z is subtracted by the speed:
+In each frame, `z` is subtracted by the speed:
 
 $$z_{n+1} = z_n - v$$
 
-The size of the size is also determined by z. The higher the z-value, the smaller the star, and vice versa. 
+The size of the size is also determined by `z`. The higher the `z`-value, the smaller the star, and vice versa. 
 
-As z decreases, the projected position expands outward and the star grows in size, creating the illusion of forward motion and depth.
+As `z` decreases, the projected position expands outward and the star grows in size, creating the illusion of forward motion and depth.
 
 When a star moves beyond the screen bounds, it is replaced with a new star at a randomized position to maintain a continuous starfield effect.
 
